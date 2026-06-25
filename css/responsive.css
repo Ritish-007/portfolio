@@ -1,0 +1,148 @@
+/* --- MEDIA QUERY: TABLET (1024PX AND DOWN) --- */
+@media (max-width: 1024px) {
+  :root {
+    --spacing-xl: 6rem;
+  }
+  
+  .project-card {
+    gap: 2rem;
+  }
+  
+  .project-title {
+    font-size: 1.75rem;
+  }
+}
+
+/* --- MEDIA QUERY: MOBILE & SMALL TABLET (768PX AND DOWN) --- */
+@media (max-width: 768px) {
+  :root {
+    --spacing-xl: 4rem;
+    --spacing-lg: 3rem;
+  }
+
+  /* Header & Navigation */
+  header {
+    top: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  header.scrolled {
+    top: 0;
+    width: 100%;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 5.5rem;
+    left: 5%;
+    width: 90%;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1rem;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: all var(--transition-speed) var(--transition-ease);
+    box-shadow: var(--glass-shadow);
+  }
+
+  .nav-links.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Projects Section Mobile Layout */
+  .project-card {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    direction: ltr !important; /* Reset alternating directions on mobile */
+  }
+
+  .project-card:nth-child(even) {
+    direction: ltr;
+  }
+
+  .project-card:nth-child(even) .project-info {
+    direction: ltr;
+  }
+
+  /* Contact Section */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  /* Spline Containers */
+  .spline-container-hero {
+    height: 350px !important;
+  }
+}
+
+/* --- MEDIA QUERY: SMALL MOBILE (480PX AND DOWN) --- */
+@media (max-width: 480px) {
+  :root {
+    --spacing-xl: 3rem;
+    --spacing-lg: 2rem;
+    --spacing-md: 1.25rem;
+  }
+
+  /* Typography scale */
+  h1 { font-size: 2.25rem !important; }
+  h2 { font-size: 1.75rem !important; }
+  
+  .btn-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .timeline {
+    padding-left: 1.25rem;
+  }
+
+  .timeline-dot {
+    left: -1.6rem;
+  }
+
+  .timeline-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-item {
+    padding-left: 1rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

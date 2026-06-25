@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Projects | Ritish B</title>
+  <meta name="description"
+    content="Explore web development projects built by Ritish B including ShopWave and SkillSynq+.">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Spline 3D Viewer Script -->
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.0/build/spline-viewer.js"></script>
+</head>
+
+<body>
+
+  <!-- Page Transition Loader -->
+  <div class="page-loader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header>
+    <a href="index.html" class="logo">RITISH<span>.B</span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-label="Toggle navigation">&#x2630;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="ai-automation.html">AI Automation</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+
+    <!-- Projects Hero Section -->
+    <section class="hero-section-centered"
+      style="text-align: center; max-width: 800px; margin: 0 auto; padding-top: 10rem; padding-bottom: 4rem; display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
+      <div class="glow-bg" style="top: 25%; left: 35%; width: 350px; height: 350px;"></div>
+
+      <div class="hero-subtitle hero-fade-in hero-fade-in-1">
+        <span>&lt;PRODUCTION WORK&gt;</span>
+      </div>
+      <h1 class="hero-title hero-fade-in hero-fade-in-2" style="font-size: 3.5rem;">Web Development</h1>
+      <p class="hero-desc hero-fade-in hero-fade-in-3"
+        style="max-width: 600px; text-align: center; font-size: 1.1rem; line-height: 1.6;">
+        Creating polished full-stack applications with modular React architecture, secure backend services, and robust
+        databases. Focused on performance, RLS security, and low-bandwidth accessibility.
+      </p>
+    </section>
+
+    <!-- Web Projects Section -->
+    <section class="section" style="padding-top: 2rem;">
+      <div class="reveal">
+
+        <!-- PROJECT 1: ShopWave -->
+        <div class="project-card">
+          <div class="project-image-container" onclick="window.open('https://shop-wave-tan.vercel.app/', '_blank')">
+            <img src="assets/images/shopwave_real.png" alt="ShopWave Mockup">
+          </div>
+          <div class="project-info">
+            <span class="project-category">Full Stack E-Commerce Platform</span>
+            <h2 class="project-title">ShopWave</h2>
+            <p class="project-description">
+              Developed a full-stack e-commerce platform featuring secure authentication, catalog queries, dynamic cart
+              calculation, user dashboards, and structured REST APIs. Implemented Supabase Row-Level Security (RLS) and
+              database transactions for secure inventory management.
+            </p>
+
+            <div class="project-features">
+              <div class="project-feature-item">Authentication</div>
+              <div class="project-feature-item">Product Management</div>
+              <div class="project-feature-item">Shopping Cart</div>
+              <div class="project-feature-item">Order Management</div>
+              <div class="project-feature-item">Admin Dashboard</div>
+              <div class="project-feature-item">Secure Checkout</div>
+              <div class="project-feature-item">REST APIs</div>
+              <div class="project-feature-item">Inventory Validation</div>
+            </div>
+
+            <div class="tech-tags-container">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Redux Toolkit</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Express.js</span>
+              <span class="tech-tag">Supabase</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">Vercel</span>
+            </div>
+
+            <div class="project-links btn-group">
+              <a href="https://shop-wave-tan.vercel.app/" target="_blank" class="btn btn-primary">
+                Live Demo
+                <span class="btn-icon">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
+                  </svg>
+                </span>
+              </a>
+              <a href="https://github.com/Ritish-007/shopWave" target="_blank" class="btn btn-secondary">
+                GitHub Repo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 2: SkillSynq+ -->
+        <div class="project-card">
+          <div class="project-image-container" onclick="window.open('https://skillsinq.netlify.app/home', '_blank')">
+            <img src="assets/images/skillsynq_real.png" alt="SkillSynq+ Mockup">
+          </div>
+          <div class="project-info">
+            <span class="project-category">Gamified Learning Platform</span>
+            <h2 class="project-title">SkillSynq+</h2>
+            <p class="project-description">
+              Built a gamified e-learning program aimed at empowering rural youth by transforming education into levels,
+              reward progressions, and interactive challenges. Tailored client-side structures for low-bandwidth
+              networks to ensure steady, latency-tolerant learning pathways.
+            </p>
+
+            <div class="project-features">
+              <div class="project-feature-item">Gamification</div>
+              <div class="project-feature-item">Learning Progress</div>
+              <div class="project-feature-item">Rewards</div>
+              <div class="project-feature-item">Challenges</div>
+              <div class="project-feature-item">Responsive Design</div>
+              <div class="project-feature-item">REST APIs</div>
+              <div class="project-feature-item">Low Bandwidth Opt.</div>
+            </div>
+
+            <div class="tech-tags-container">
+              <span class="tech-tag">React.js</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Supabase</span>
+              <span class="tech-tag">REST APIs</span>
+              <span class="tech-tag">Netlify</span>
+            </div>
+
+            <div class="project-links btn-group">
+              <a href="https://skillsinq.netlify.app/" target="_blank" class="btn btn-primary">
+                Live Demo
+                <span class="btn-icon">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
+                  </svg>
+                </span>
+              </a>
+              <a href="https://github.com/Ritish-007/rural-youth-boost" target="_blank" class="btn btn-secondary">
+                GitHub Repo
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">RITISH<span>.B</span></a>
+          <p class="footer-tagline">Computer Science Student • Full Stack Developer • AI Automation Builder</p>
+        </div>
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="ai-automation.html">AI Automation</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Ritish B. Designed and Developed for Recruiters.</p>
+        <div class="social-links">
+          <a href="https://github.com/Ritish-007" target="_blank" class="social-icon" aria-label="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+              </path>
+            </svg>
+          </a>
+          <a href="https://linkedin.com/in/ritish-b-" target="_blank" class="social-icon" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume | Ritish B</title>
+  <meta name="description" content="Resume of Ritish B, Computer Science student, Full Stack Developer, and AI Automation Builder.">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    /* Custom styles for online view of printable resume */
+    .resume-container {
+      max-width: 850px;
+      margin: 8rem auto 4rem auto;
+      padding: 3rem;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      box-shadow: var(--glass-shadow);
+    }
+    
+    .resume-header {
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .resume-header h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+
+    .resume-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      text-align: right;
+    }
+
+    .resume-contact a {
+      color: var(--text-primary);
+    }
+
+    .resume-contact a:hover {
+      text-decoration: underline;
+    }
+
+    .resume-section {
+      margin-bottom: 2.5rem;
+    }
+
+    .resume-section-title {
+      font-family: var(--font-mono);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .resume-item {
+      margin-bottom: 1.5rem;
+    }
+
+    .resume-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .resume-item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .resume-item-title {
+      font-size: 1.15rem;
+      color: var(--text-primary);
+    }
+
+    .resume-item-org {
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    .resume-item-date {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+
+    .resume-item-bullets {
+      list-style-type: disc;
+      margin-left: 1.25rem;
+      margin-top: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .resume-item-bullets li {
+      color: var(--text-secondary);
+      font-size: 0.925rem;
+      line-height: 1.5;
+    }
+
+    .resume-skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .resume-skills-col {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .resume-skills-label {
+      font-weight: 600;
+      color: var(--text-primary);
+      font-size: 0.95rem;
+    }
+
+    .resume-skills-val {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    /* Print styles to generate perfect standard white paper PDF */
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        background-image: none !important;
+      }
+      
+      header, footer, .btn, .glow-bg, .no-print {
+        display: none !important;
+      }
+
+      .resume-container {
+        margin: 0 !important;
+        padding: 0 !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        max-width: 100% !important;
+      }
+
+      .resume-header {
+        border-bottom: 2px solid #000000 !important;
+      }
+
+      .resume-header h1 {
+        color: #000000 !important;
+      }
+
+      .resume-contact, .resume-contact a {
+        color: #333333 !important;
+      }
+
+      .resume-section-title {
+        color: #333333 !important;
+        border-bottom: 1px solid #333333 !important;
+      }
+
+      .resume-item-title, .resume-item-org {
+        color: #000000 !important;
+      }
+
+      .resume-item-date {
+        color: #333333 !important;
+      }
+
+      .resume-item-bullets li {
+        color: #222222 !important;
+      }
+
+      .resume-skills-label {
+        color: #000000 !important;
+      }
+
+      .resume-skills-val {
+        color: #222222 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page Transition Loader -->
+  <div class="page-loader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="no-print">
+    <a href="index.html" class="logo">RITISH<span>.B</span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-label="Toggle navigation">&#x2630;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="ai-automation.html">AI Automation</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </header>
+
+  <main class="container">
+    
+    <!-- Print floating controls -->
+    <div class="no-print" style="margin-top: 8rem; display: flex; justify-content: space-between; align-items: center; border: 1px solid var(--border-color); padding: 1.25rem 2rem; border-radius: 12px; background: var(--card-bg); backdrop-filter: blur(10px);">
+      <div>
+        <h2 style="font-size: 1.2rem;">Official Resume Document</h2>
+        <p style="font-size: 0.85rem; color: var(--text-secondary);">Print this page to save as an industry-standard PDF.</p>
+      </div>
+      <button onclick="window.print()" class="btn btn-primary">
+        Print Resume
+        <span class="btn-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        </span>
+      </button>
+    </div>
+
+    <!-- Resume Document Area -->
+    <article class="resume-container">
+      
+      <!-- Resume Header -->
+      <div class="resume-header">
+        <div style="display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap;">
+          <img src="assets/images/ritish_profile.png" alt="Ritish B" style="width: 75px; height: 75px; border-radius: 50%; border: 1px solid var(--border-color); object-fit: cover; filter: grayscale(100%);" class="no-print">
+          <div>
+            <h1>Ritish B</h1>
+            <p style="font-size: 1.1rem; color: var(--text-secondary); margin-top: 0.25rem;">Computer Science Student • Full Stack Developer</p>
+          </div>
+        </div>
+        <div class="resume-contact">
+          <span>Hyderabad, Telangana</span>
+          <span><a href="mailto:british.1417@gmail.com">british.1417@gmail.com</a></span>
+          <span>+91 9908431117</span>
+          <span><a href="https://linkedin.com/in/ritish-b-" target="_blank">linkedin.com/in/ritish-b-</a></span>
+          <span><a href="https://github.com/Ritish-007" target="_blank">github.com/Ritish-007</a></span>
+        </div>
+      </div>
+
+      <!-- Section: Career Objective -->
+      <section class="resume-section">
+        <h2 class="resume-section-title">Career Objective</h2>
+        <p style="font-size: 0.95rem; line-height: 1.6;">
+          Motivated second-year B.Sc. Computer Science student at BITS Pilani Hyderabad seeking a Summer 2025 Software Development Internship. Skilled in Python, full-stack web development (Node.js, React.js, Express), and Generative AI / LLM engineering. Eager to contribute to a collaborative development team and solve real-world problems through scalable software solutions.
+        </p>
+      </section>
+
+      <!-- Section: Education -->
+      <section class="resume-section">
+        <h2 class="resume-section-title">Education</h2>
+        
+        <div class="resume-item">
+          <div class="resume-item-header">
+            <span class="resume-item-title">B.Sc. Computer Science and Engineering</span>
+            <span class="resume-item-date">Aug 2024 – Present</span>
+          </div>
+          <div class="resume-item-org">BITS Pilani Hyderabad &amp; NXT Wave Institute of Advanced Technologies (Completed: 3 Semesters)</div>
+        </div>
+
+        <div class="resume-item">
+          <div class="resume-item-header">
+            <span class="resume-item-title">Class XII – MPC</span>
+            <span class="resume-item-date">2022 – 2024</span>
+          </div>
+          <div class="resume-item-org">Sri Chaitanya Junior College (Telangana State Board of Intermediate Education)</div>
+        </div>
+
+        <div class="resume-item">
+          <div class="resume-item-header">
+            <span class="resume-item-title">Class X</span>
+            <span class="resume-item-date">2021 – 2022</span>
+          </div>
+          <div class="resume-item-org">Panineeya MahaVidyalaya Public School (CBSE)</div>
+        </div>
+      </section>
+
+      <!-- Section: Technical Skills -->
+      <section class="resume-section">
+        <h2 class="resume-section-title">Technical Skills</h2>
+        <div class="resume-skills-grid">
+          <div class="resume-skills-col">
+            <span class="resume-skills-label">Languages</span>
+            <span class="resume-skills-val">Python, C, JavaScript</span>
+          </div>
+          <div class="resume-skills-col">
+            <span class="resume-skills-label">Web Development</span>
+            <span class="resume-skills-val">HTML5, CSS3, React.js, Node.js, Express.js</span>
+          </div>
+          <div class="resume-skills-col">
+            <span class="resume-skills-label">Databases</span>
+            <span class="resume-skills-val">PostgreSQL, MongoDB, Supabase, SQL</span>
+          </div>
+          <div class="resume-skills-col">
+            <span class="resume-skills-label">AI / LLM</span>
+            <span class="resume-skills-val">Generative AI, LLM Engineering, Prompt Engineering, Claude API</span>
+          </div>
+          <div class="resume-skills-col">
+            <span class="resume-skills-label">Tools &amp; Platforms</span>
+            <span class="resume-skills-val">Git, GitHub, VS Code, Google Colab, n8n, Vercel, Netlify</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Projects -->
+      <section class="resume-section">
+        <h2 class="resume-section-title">Projects</h2>
+
+        <div class="resume-item">
+          <div class="resume-item-header">
+            <span class="resume-item-title">ShopWave – Full-Stack E-Commerce Platform</span>
+            <span class="resume-item-date">React, Node, Express, Supabase, Vercel</span>
+          </div>
+          <ul class="resume-item-bullets">
+            <li>Developed a full-stack e-commerce platform using React, Express.js, and Supabase, implementing authentication, product catalog management, shopping cart functionality, and secure order processing workflows.</li>
+            <li>Architected a PostgreSQL database with Supabase Row-Level Security (RLS), database triggers, and transactional checkout logic to ensure data integrity, secure access control, and consistent inventory management.</li>
+            <li>Engineered RESTful APIs and an admin dashboard for product, order, and user management, incorporating server-side price and stock validation to prevent client-side tampering.</li>
+          </ul>
+        </div>
+
+        <div class="resume-item">
+          <div class="resume-item-header">
+            <span class="resume-item-title">SkillSynq+ – Gamified Learning Platform</span>
+            <span class="resume-item-date">React, Node, Supabase, Netlify</span>
+          </div>
+          <ul class="resume-item-bullets">
+            <li>Developed a gamified e-learning platform aimed at empowering rural youth by making skill development interactive, engaging, and accessible.</li>
+            <li>Designed a game-inspired progression system with levels, rewards, and challenges to improve course completion rates and user motivation.</li>
+            <li>Deployed on Netlify with a focus on low-bandwidth performance to ensure accessibility in rural areas with limited connectivity.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Section: Extracurricular Activities -->
+      <section class="resume-section">
+        <h2 class="resume-section-title">Extracurricular Activities</h2>
+        <div class="resume-item">
+          <div class="resume-item-header">
+            <span class="resume-item-title">Entrepreneurship Club Member</span>
+            <span class="resume-item-date">NXT Wave Institute</span>
+          </div>
+          <ul class="resume-item-bullets">
+            <li>Participated in pitch competitions and case study discussions, developing skills in business problem-solving and presentation.</li>
+            <li>Collaborated with peers to design business concepts targeting real-world market gaps, engaging with founders and investors for mentorship.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Section: Languages -->
+      <section class="resume-section" style="margin-bottom: 0;">
+        <h2 class="resume-section-title">Languages</h2>
+        <p style="font-size: 0.95rem;">English (Fluent) | Hindi (Fluent) | Telugu (Native)</p>
+      </section>
+
+    </article>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="no-print">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+        <p class="footer-copy">&copy; 2026 Ritish B. Designed and Developed for Recruiters.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

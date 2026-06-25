@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me | Ritish B</title>
+  <meta name="description"
+    content="Learn about Ritish B's academic journey, technical skills, and development experience.">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Spline 3D Viewer Script -->
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.0/build/spline-viewer.js"></script>
+</head>
+
+<body>
+
+  <!-- Page Transition Loader -->
+  <div class="page-loader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header>
+    <a href="index.html" class="logo">RITISH<span>.B</span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-label="Toggle navigation">&#x2630;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="ai-automation.html">AI Automation</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+
+    <!-- About Hero Section -->
+    <section class="about-hero">
+      <div class="glow-bg" style="top: 15%; right: 10%; width: 350px; height: 350px;"></div>
+
+      <div class="about-text hero-fade-in hero-fade-in-1">
+        <div class="hero-subtitle">
+          <span>&lt;WHO I AM&gt;</span>
+        </div>
+        <h1>About Me</h1>
+
+        <div
+          style="display: flex; gap: 1.5rem; align-items: center; margin-bottom: 2rem; border: 1px solid var(--border-color); padding: 1.25rem; border-radius: 12px; background: rgba(255, 255, 255, 0.01); backdrop-filter: blur(10px);">
+          <img src="assets/images/ritish_profile.png" alt="Ritish B"
+            style="width: 80px; height: 80px; border-radius: 50%; border: 1px solid var(--border-color); object-fit: cover; filter: grayscale(100%); transition: all var(--transition-speed) var(--transition-ease);"
+            onmouseover="this.style.filter='grayscale(0%)'; this.style.borderColor='var(--accent-white)'"
+            onmouseout="this.style.filter='grayscale(100%)'; this.style.borderColor='var(--border-color)'">
+          <div>
+            <h2 style="font-size: 1.35rem; font-weight: 700; margin: 0; line-height: 1.2;">Ritish B</h2>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.25rem;">BITS Pilani Computer
+              Science Student</p>
+          </div>
+        </div>
+
+        <p>
+          I am a Computer Science student passionate about software development, backend engineering, AI automation, and
+          building practical solutions that improve productivity.
+        </p>
+        <p>
+          My interests include Full Stack Development, Artificial Intelligence, Workflow Automation, REST APIs, Cloud
+          Deployment, and scalable software architecture.
+        </p>
+        <p>
+          I enjoy transforming ideas into polished products while continuously learning modern technologies and solving
+          challenging problems.
+        </p>
+      </div>
+
+      <!-- Profile Display Container -->
+      <div class="about-spline-container hero-fade-in hero-fade-in-2"
+        style="display: flex; align-items: center; justify-content: center; background: radial-gradient(circle at center, rgba(30, 30, 30, 0.4) 0%, rgba(3, 3, 3, 0.9) 100%);">
+        <div class="glow-bg" style="width: 200px; height: 200px; top: 25%; left: 25%;"></div>
+
+        <!-- Premium Frame for Portrait -->
+        <div
+          style="position: relative; width: 85%; height: 85%; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.01); backdrop-filter: blur(10px);">
+          <img src="assets/images/ritish_profile.png" alt="Ritish B"
+            style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%) contrast(1.1); transition: all 0.6s var(--transition-ease);"
+            onmouseover="this.style.filter='grayscale(0%) contrast(1.1)'; this.style.transform='scale(1.02)'"
+            onmouseout="this.style.filter='grayscale(100%) contrast(1.1)'; this.style.transform='scale(1)'">
+
+          <!-- Floating Status Badge -->
+          <div
+            style="position: absolute; bottom: 1rem; left: 1rem; display: flex; align-items: center; gap: 0.4rem; background: rgba(0,0,0,0.85); border: 1px solid var(--border-color); padding: 0.4rem 0.8rem; border-radius: 9999px; font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-primary); backdrop-filter: blur(5px);">
+            <span
+              style="width: 5px; height: 5px; border-radius: 50%; background: #30d158; box-shadow: 0 0 6px #30d158; animation: pulseGlow 2s infinite;"></span>
+            BITS Pilani CS
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education and Skills Split Section -->
+    <section class="section reveal">
+      <div class="about-split">
+
+        <!-- Education Column -->
+        <div class="about-split-column">
+          <h2>Education</h2>
+
+          <div class="timeline">
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-header">
+                <span class="timeline-school">BITS Pilani Hyderabad</span>
+                <span class="timeline-date">2024 – Present</span>
+              </div>
+              <div class="timeline-degree">B.Sc. Computer Science</div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-header">
+                <span class="timeline-school">NXT Wave Institute</span>
+                <span class="timeline-date">2024 – Present</span>
+              </div>
+              <div class="timeline-degree">Software Development Program (Completed: 3 Semesters)</div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-header">
+                <span class="timeline-school">Sri Chaitanya Junior College</span>
+                <span class="timeline-date">2022 – 2024</span>
+              </div>
+              <div class="timeline-degree">MPC (Intermediate)</div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-header">
+                <span class="timeline-school">Panineeya MahaVidyalaya School</span>
+                <span class="timeline-date">2021 – 2022</span>
+              </div>
+              <div class="timeline-degree">CBSE (Class X)</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Skills Column -->
+        <div class="about-split-column">
+          <h2>Skills</h2>
+
+          <div class="skills-grid">
+
+            <!-- Skill Category 1 -->
+            <div class="glass-card skill-card">
+              <div class="skill-category-title">
+                <span>Languages</span>
+              </div>
+              <div class="tech-tags-container">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">C++</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+            </div>
+
+            <!-- Skill Category 2 -->
+            <div class="glass-card skill-card">
+              <div class="skill-category-title">
+                <span>Frontend</span>
+              </div>
+              <div class="tech-tags-container">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">React.js</span>
+                <span class="tech-tag">Redux Toolkit</span>
+              </div>
+            </div>
+
+            <!-- Skill Category 3 -->
+            <div class="glass-card skill-card">
+              <div class="skill-category-title">
+                <span>Backend &amp; DB</span>
+              </div>
+              <div class="tech-tags-container">
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Express.js</span>
+                <span class="tech-tag">REST APIs</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">Supabase</span>
+              </div>
+            </div>
+
+            <!-- Skill Category 4 -->
+            <div class="glass-card skill-card">
+              <div class="skill-category-title">
+                <span>AI &amp; Automation</span>
+              </div>
+              <div class="tech-tags-container">
+                <span class="tech-tag">Generative AI</span>
+                <span class="tech-tag">LLM Engineering</span>
+                <span class="tech-tag">Prompt Engineering</span>
+                <span class="tech-tag">n8n</span>
+                <span class="tech-tag">Workflow Automation</span>
+              </div>
+            </div>
+
+            <!-- Skill Category 5 -->
+            <div class="glass-card skill-card">
+              <div class="skill-category-title">
+                <span>Tools &amp; Deploy</span>
+              </div>
+              <div class="tech-tags-container">
+                <span class="tech-tag">Git</span>
+                <span class="tech-tag">GitHub</span>
+                <span class="tech-tag">VS Code</span>
+                <span class="tech-tag">Google Colab</span>
+                <span class="tech-tag">Netlify</span>
+                <span class="tech-tag">Vercel</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">RITISH<span>.B</span></a>
+          <p class="footer-tagline">Computer Science Student • Full Stack Developer • AI Automation Builder</p>
+        </div>
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="ai-automation.html">AI Automation</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Ritish B. Designed and Developed for Recruiters.</p>
+        <div class="social-links">
+          <a href="https://github.com/Ritish-007" target="_blank" class="social-icon" aria-label="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+              </path>
+            </svg>
+          </a>
+          <a href="https://linkedin.com/in/ritish-b-" target="_blank" class="social-icon" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
